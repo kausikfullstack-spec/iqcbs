@@ -1,0 +1,27 @@
+/* Transparent education doodles over the site's existing section colours. */
+main > section,
+main > .blog-wrap {
+  position: relative;
+  isolation: isolate;
+}
+
+main > section::before,
+main > .blog-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("background-particles.png");
+  background-repeat: repeat;
+  background-size: 720px auto;
+  opacity: 0.06;
+}
+
+@media (max-width: 600px) {
+  main > section::before,
+  main > .blog-wrap::before {
+    background-size: 520px auto;
+    opacity: 0.04;
+  }
+}
