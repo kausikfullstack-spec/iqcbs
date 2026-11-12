@@ -44,6 +44,7 @@
   });
   filters.forEach(function (button) {
     button.addEventListener('click', function () {
+      document.querySelector('.gallery-grid').classList.toggle('gallery-grid-videos', button.dataset.galleryFilter === 'video');
       filters.forEach(function (filter) { filter.setAttribute('aria-pressed', String(filter === button)); });
       cards.forEach(function (card) { card.hidden = button.dataset.galleryFilter !== 'all' && card.dataset.kind !== button.dataset.galleryFilter; });
       document.getElementById('gallery-count').textContent = visible().length + (visible().length === 1 ? ' item' : ' items');
