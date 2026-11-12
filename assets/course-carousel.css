@@ -1,0 +1,18 @@
+.course-banners{max-width:1200px;margin:0 auto;padding:16px 24px 64px}
+.course-banners-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+.course-banners-heading p{margin:0 0 10px;color:#A85A0F;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.course-banners-heading h2{margin:0;font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(1.8rem,3.4vw,3rem);line-height:1.1;letter-spacing:-.02em}
+.course-banners-heading a{font-weight:700}
+.course-banner-track{display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:20px}
+.course-banner-track::-webkit-scrollbar{display:none}
+.course-banner-slide{flex:0 0 calc((100% - 48px)/3);min-width:0;scroll-snap-align:start;overflow:hidden;border-radius:20px;background:#F1E7DC}
+.course-banner-slide img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:contain}
+.course-banner-controls{display:flex;justify-content:center;align-items:center;gap:16px;flex-wrap:wrap;margin-top:24px}
+.course-banner-controls>button{min-width:44px;min-height:44px;border:1px solid #CDBBA8;border-radius:999px;background:#fff;color:#131A22;font:inherit;cursor:pointer;padding:8px 16px}
+.course-banner-controls>button:hover{background:#FFF3E5}
+.course-banner-dots{display:flex;gap:10px}
+.course-banner-dots button{display:grid;place-items:center;width:28px;height:44px;border:0;background:transparent;padding:0;cursor:pointer}
+.course-banner-dots button::before{content:'';width:9px;height:9px;border-radius:50%;background:#CDBBA8}
+.course-banner-dots button[aria-pressed=true]::before{background:#A85A0F;width:12px;height:12px}
+@media(max-width:900px){.course-banner-slide{flex-basis:calc((100% - 24px)/2)}}
+@media(max-width:560px){.course-banners{padding:8px 24px 48px}.course-banner-slide{flex-basis:100%}.course-banner-track{gap:16px}.course-banner-controls{gap:8px}}
