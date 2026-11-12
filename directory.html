@@ -49,7 +49,6 @@ input[type=search]{-webkit-appearance:none;appearance:none}
 .chip[aria-pressed="true"]{background:#4E361F;color:#FFFFFF;border-color:#4E361F}
 [hidden]{display:none !important}
 </style>
-<link rel="stylesheet" href="assets/site-background.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -177,7 +176,7 @@ input[type=search]{-webkit-appearance:none;appearance:none}
 <footer style="background: #0A121D; color: #D9C7B3; padding: 40px 0; font-size: 14px">
 <div style="max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px">
 <span>© 2026 IQCBS · 41/3 Gariahat Road (South), Kolkata 700068 · <a href="mailto:partha@iqcbs.com" style="color: #D9C7B3">partha@iqcbs.com</a></span>
-<div style="display: flex; gap: 20px"><a href="index.html" style="color: #D9C7B3">Home</a><a href="https://iqcbs.com/privacy-policy" style="color: #D9C7B3">Privacy policy</a></div>
+<div style="display: flex; gap: 20px"><a href="index.html" style="color: #D9C7B3">Home</a><a href="privacy-policy.html" style="color: #D9C7B3">Privacy policy</a></div>
 </div>
 </footer>
 
@@ -211,7 +210,7 @@ input[type=search]{-webkit-appearance:none;appearance:none}
 (function () {
   // Listings live in data/directory.json (see README.md for the format).
   var DATA_URL = 'data/directory.json';
-  var CERTS = [['all', 'All'], ['nlp-p', 'NLP Practitioner'], ['nlp-m', 'NLP Master Practitioner'], ['hyp', 'Hypnotherapy'],
+  var CERTS = [['all', 'All'], ['nlp-p', 'NLP Practitioners'], ['nlp-m', 'NLP Master Practitioners'], ['hyp', 'Hypnotherapy'],
     ['tlt', 'Time Line Therapy®'], ['msp', 'Mental Space Psychology'], ['iemt', 'IEMT'], ['mom', 'Metaphors of Movement']];
   // Certification filters are worked out from the course names in each listing.
   var FAMILIES = [[/master practitioner/i, ['nlp-m', 'nlp-p']], [/nlp practitioner/i, ['nlp-p']], [/hypno/i, ['hyp']],

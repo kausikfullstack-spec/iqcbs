@@ -1,8 +1,10 @@
 (function () {
   'use strict';
 
-  var video = document.querySelector('.gurukul-feature-video video');
-  if (!video || !('IntersectionObserver' in window)) return;
+  var videos = document.querySelectorAll('.gurukul-feature-video video');
+  if (!videos.length || !('IntersectionObserver' in window)) return;
+
+  videos.forEach(function (video) {
 
   var inView = false;
   video.muted = true;
@@ -24,4 +26,5 @@
 
   observer.observe(video);
   document.addEventListener('visibilitychange', updatePlayback);
+  });
 })();
