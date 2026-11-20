@@ -1,0 +1,38 @@
+# robots.txt for https://www.iqcbs.com
+# Updated 20 November 2026
+# Applies to all pages and assets. Page-level indexing directives still apply.
+
+# All crawlers, including Googlebot and Bingbot
+User-agent: *
+Allow: /
+
+# AI search, answer engines and user-requested fetches
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: DuckAssistBot
+User-agent: MistralAI-Index
+User-agent: MistralAI-User
+User-agent: meta-webindexer
+User-agent: meta-externalfetcher
+User-agent: Amzn-SearchBot
+User-agent: Amzn-User
+User-agent: Applebot
+Allow: /
+
+# AI model training: allowed.
+# To opt out for these agents, change the following Allow to Disallow.
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+User-agent: Amazonbot
+User-agent: CCBot
+User-agent: MistralAI-Training
+Allow: /
+
+Sitemap: https://www.iqcbs.com/sitemap.xml
