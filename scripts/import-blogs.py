@@ -106,7 +106,7 @@ for p in records:
     body = '<div class="blog-wrap"><nav aria-label="Breadcrumb"><a href="index.html">Home</a> / <a href="blogs.html">Blogs</a></nav><header style="max-width:900px;margin:32px auto"><p class="blog-meta"><time datetime="' + p['date'] + '">' + p['display_date'] + '</time> · IQCBS · ' + str(max(1, round(words/200))) + ' min read</p><h1 class="blog-title">' + esc(p['title']) + '</h1></header>'
     if p['image']:
         body += '<img class="blog-hero" src="' + p['image'] + '" alt="' + esc(p['title']) + '">'
-    body += '<article class="blog-article">' + p['content'] + '<p class="blog-meta">Originally published on <a href="' + esc(p['source']) + '">iqcbs.com</a>.</p><p><a href="blogs.html">← All blogs</a></p></article><section style="margin-top:64px"><h2>More to explore</h2><div class="blog-grid">' + ''.join(card(other) for other in [r for r in records if r != p][:3]) + '</div></section></div>'
+    body += '<article class="blog-article">' + p['content'] + '<p><a href="blogs.html">← All blogs</a></p></article><section style="margin-top:64px"><h2>More to explore</h2><div class="blog-grid">' + ''.join(card(other) for other in [r for r in records if r != p][:3]) + '</div></section></div>'
     (ROOT / p['url']).write_text(document(p['title'], p['excerpt'], body), encoding='utf-8')
 
 home = template
